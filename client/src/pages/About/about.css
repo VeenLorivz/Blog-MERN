@@ -1,0 +1,9 @@
+@media (max-width: 992px) {
+  #image {
+    display: none;
+  }
+}
+
+.bi {
+  color: black;
+}
