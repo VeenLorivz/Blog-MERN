@@ -3,7 +3,7 @@ import "./about.css";
 import { Card, Image, Row, Col, Container } from "react-bootstrap";
 
 const About = () => {
-  const PF = "https://lorivzmernblog.herokuapp.com/images/";
+  const PF = "https://lorivzblog.herokuapp.com/images/";
 
   return (
     <>

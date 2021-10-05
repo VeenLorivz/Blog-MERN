@@ -18,7 +18,7 @@ const UpdateAccount = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [file, setFile] = useState("");
-  const PF = "https://lorivzmernblog.herokuapp.com/images/";
+  const PF = "https://lorivzblog.herokuapp.com/images/";
 
   useEffect(() => {
     try {

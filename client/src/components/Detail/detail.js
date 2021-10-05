@@ -14,7 +14,7 @@ const Detail = () => {
   const [desc, setDesc] = useState("");
   const { user } = useContext(Context);
   const [updateMode, setUpdateMode] = useState(false);
-  const PF = "https://lorivzmernblog.herokuapp.com/images/";
+  const PF = "https://lorivzblog.herokuapp.com/images/";
 
   useEffect(() => {
     const path = location.pathname.split("/");

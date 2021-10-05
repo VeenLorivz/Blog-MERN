@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const CardComp = ({ post }) => {
-  const PF = "https://lorivzmernblog.herokuapp.com/images/";
+  const PF = "https://lorivzblog.herokuapp.com/images/";
   return (
     <div>
       <Link

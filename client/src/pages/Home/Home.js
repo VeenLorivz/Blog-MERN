@@ -4,7 +4,7 @@ import "./home.css";
 import { Row, Col, Container, Image } from "react-bootstrap";
 
 const Home = () => {
-  const PF = "https://lorivzmernblog.herokuapp.com/images/";
+  const PF = "https://lorivzblog.herokuapp.com/images/";
   const [loading, setLoading] = useState(true);
 
   return (

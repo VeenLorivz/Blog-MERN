@@ -8,7 +8,7 @@ import { Context } from "../../context/Context";
 const NavbarComp = () => {
   const location = useLocation();
   const { user, dispatch } = useContext(Context);
-  const PF = "https://lorivzmernblog.herokuapp.com/images/";
+  const PF = "https://lorivzblog.herokuapp.com/images/";
 
   const handleLogout = (e) => {
     e.preventDefault();
