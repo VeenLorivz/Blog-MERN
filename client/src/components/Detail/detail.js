@@ -55,7 +55,7 @@ const Detail = () => {
   };
 
   return (
-    <>
+    <div style={{ marginTop: "100px" }}>
       {post && (
         <Row className="justify-content-center">
           <Col lg={8} md={10} xs={10}>
@@ -131,7 +131,7 @@ const Detail = () => {
           </Col>
         </Row>
       )}
-    </>
+    </div>
   );
 };
 

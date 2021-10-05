@@ -26,7 +26,7 @@ const Register = () => {
   };
 
   return (
-    <>
+    <div style={{ marginTop: "100px" }}>
       <h1 className="display-5 text-center my-4">Register</h1>
       <Row className="justify-content-center text-center">
         <Col md={6} xs="6">
@@ -70,7 +70,7 @@ const Register = () => {
           </Form>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 
