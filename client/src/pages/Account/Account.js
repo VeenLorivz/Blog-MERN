@@ -59,9 +59,14 @@ const UpdateAccount = () => {
     }
   };
 
+  const handleLogout = (e) => {
+    e.preventDefault();
+    dispatch({ type: "LOGOUT" });
+  };
+
   return (
     <>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center" style={{ marginTop: "100px" }}>
         <Col xs={8} lg={8}>
           <Card className="mt-3 shadow">
             <Card.Title>
@@ -118,6 +123,13 @@ const UpdateAccount = () => {
                 </FloatingLabel>
                 <Button variant="primary" onClick={handleUpdate}>
                   Update
+                </Button>
+                <Button
+                  variant="danger"
+                  onClick={handleLogout}
+                  className="mx-2"
+                >
+                  Logout
                 </Button>
               </Form>
             </Card.Body>

@@ -1,7 +1,14 @@
 import React, { useContext } from "react";
 import "./navbar.css";
 import { useLocation } from "react-router";
-import { Navbar, Container, Nav, Image, Dropdown } from "react-bootstrap";
+import {
+  Navbar,
+  Container,
+  Nav,
+  Image,
+  Dropdown,
+  SplitButton,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 
@@ -10,14 +17,9 @@ const NavbarComp = () => {
   const { user, dispatch } = useContext(Context);
   const PF = "https://lorivzblog.herokuapp.com/images/";
 
-  const handleLogout = (e) => {
-    e.preventDefault();
-    dispatch({ type: "LOGOUT" });
-  };
-
   return (
     <div>
-      <Navbar bg="dark" className="navbar-dark shadow-sm">
+      <Navbar bg="dark" className="navbar-dark shadow-sm fixed-top" expand="md">
         <Container>
           <Link
             className={
@@ -27,9 +29,9 @@ const NavbarComp = () => {
           >
             Lorivz-Blog
           </Link>
-
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="nav-center">
+            <Nav className="mx-auto">
               <Link
                 className={
                   location.pathname === "/" ? "nav-link active" : "nav-link"
@@ -37,6 +39,16 @@ const NavbarComp = () => {
                 to="/"
               >
                 Home
+              </Link>
+              <Link
+                className={
+                  location.pathname === "/write"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+                to="/write"
+              >
+                Write
               </Link>
               <Link
                 className={
@@ -49,44 +61,41 @@ const NavbarComp = () => {
                 About
               </Link>
             </Nav>
-
-            <Nav className="ms-auto">
-              {user ? (
-                <Dropdown className="ms-auto">
-                  <Dropdown.Toggle variant="dark" id="dropdown-basic">
-                    {user.profilePic ? (
+            <Nav>
+              <Link className="nav-link active" to="/account">
+                {user ? (
+                  user.profilePic ? (
+                    <>
                       <Image
                         src={PF + user.profilePic}
                         roundedCircle
-                        style={{ maxWidth: "30px" }}
+                        style={{ maxWidth: "20px", marginRight: "7px" }}
                       />
-                    ) : (
+                      {user.username}
+                    </>
+                  ) : (
+                    <>
                       <Image
                         src={PF + "avatar.png"}
                         roundedCircle
-                        style={{ maxWidth: "30px" }}
+                        style={{ maxWidth: "20px" }}
                       />
-                    )}
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="/account">Account</Dropdown.Item>
-                    <Dropdown.Item href="/write">Write</Dropdown.Item>
-                    <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              ) : (
-                <Link
-                  className={
-                    location.pathname === "/login"
-                      ? "nav-link active"
-                      : "nav-link"
-                  }
-                  to="/login"
-                >
-                  Login
-                </Link>
-              )}
+                      {user.username}
+                    </>
+                  )
+                ) : (
+                  <Link
+                    className={
+                      location.pathname === "/login"
+                        ? "nav-link active"
+                        : "nav-link"
+                    }
+                    to="/login"
+                  >
+                    Login
+                  </Link>
+                )}
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

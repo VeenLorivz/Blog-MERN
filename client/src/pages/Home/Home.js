@@ -8,7 +8,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   return (
-    <Container>
+    <Container style={{ marginTop: "58px" }}>
       <Row>
         <Col className="jumbotron p-0 shadow-sm">
           <Image

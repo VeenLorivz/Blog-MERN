@@ -7,7 +7,7 @@ const About = () => {
 
   return (
     <>
-      <Container>
+      <Container style={{ marginTop: "100px" }}>
         <Card className="p-4 mt-3 shadow">
           <Card.Body>
             <Row className="justify-content-spacing">

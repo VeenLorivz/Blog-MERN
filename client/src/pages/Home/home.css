@@ -46,3 +46,37 @@
     width: 400px;
   }
 }
+@media (max-width: 500px) {
+  .jumbotron-text {
+    font-size: calc(1.18rem + 1.15vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .jumbotron-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.685rem;
+    border-radius: 0.2rem;
+    top: 58%;
+  }
+  .jumbotron {
+    height: 202px;
+    width: 300px;
+  }
+}
+@media (max-width: 320px) {
+  .jumbotron-text {
+    font-size: calc(1rem + 1.15vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .jumbotron-btn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.565rem;
+    border-radius: 0.2rem;
+    top: 55%;
+  }
+  .jumbotron {
+    height: 202px;
+    width: 300px;
+  }
+}

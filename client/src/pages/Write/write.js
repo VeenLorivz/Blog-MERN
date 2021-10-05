@@ -40,7 +40,7 @@ const Write = () => {
 
   return (
     <>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center" style={{ marginTop: "100px" }}>
         <Col md={8} xs={8}>
           <h1 className="display-5 text-center my-4">Write Post</h1>
           <Form onSubmit={handleSubmit}>
@@ -91,7 +91,7 @@ const Write = () => {
               />
             </Form.Group>
 
-            <Button type="submit" variant="primary" className="mt-3 d-block">
+            <Button type="submit" variant="primary" className="my-3 d-block">
               Add Post
             </Button>
             {error && (
